@@ -19,8 +19,8 @@ class LivroView:
     @staticmethod
     def cadastrar():
         titulo = input("Titulo do livro: ")
-        ano = input("Ano de publicação: ")
-        id_autor = input("Id do autor: ")
+        ano = int(input("Ano de publicação: "))
+        id_autor = int(input("Id do autor: "))
         return titulo, ano, id_autor
             
     @staticmethod
@@ -30,7 +30,7 @@ class LivroView:
         else:
             print("\n=====Lista de Livros=====\n")
             for l in livros:
-                print(f"ID: {l[0]} | Titulo: {l[1]} | Ano de Publicação: {l[2]} | ID do autor: {l[3]}") 
+                print(f"ID: {l[0]} | Titulo: {l[1]} | Ano de Publicação: {l[2]} | Autor: {l[3]}") 
 
     @staticmethod
     def id_atualizar():
@@ -44,7 +44,7 @@ class LivroView:
     def novos_dados():
         titulo = input("\nNovo titulo: ")
         ano = input("Nova ano de publicação: ")
-        id_autor = input("Novo ID do autor: ")
+        id_autor = input("ID do autor: ")
         return titulo, ano, id_autor
         
     @staticmethod
@@ -58,4 +58,5 @@ class LivroView:
     
     @staticmethod
     def mensagem(msg):
+
         print(msg)
